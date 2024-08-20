@@ -1,3 +1,4 @@
+import time
 import multiprocessing as mp
 from typing import List
 
@@ -92,5 +93,7 @@ class MilvusUploader(BaseUploader):
                 using=MILVUS_DEFAULT_ALIAS,
             )
 
+        # print("sleep 180s ......")
+        # time.sleep(180)
         cls.collection.load()
         return {}
